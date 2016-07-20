@@ -1,2 +1,1 @@
 # manifesto-simple-demo
-
