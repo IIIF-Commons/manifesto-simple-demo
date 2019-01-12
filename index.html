@@ -1,10 +1,10 @@
 <html>
 <head>
-  <script src="node_modules/manifesto.js/dist/client/manifesto.bundle.js"></script>
+  <script src="https://unpkg.com/manifesto.js@3.0.9-pre.1/dist-umd/manifesto.js"></script>
   <script>
 	  manifesto.loadManifest('http://wellcomelibrary.org/iiif/b18035723/manifest').then(function(manifest){
-      var m = manifesto.create(manifest);
-      document.body.innerHTML = m.getLabel();
+      var m = manifesto.parseManifest(manifest);
+      document.body.innerHTML = manifesto.LanguageMap.getValue(m.getLabel(), 'en-gb');
     });
   </script>
 </head>
